@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App Pomodoro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="encabezado">
+    <h1>APP POMODORO</h1>
+  </div>
+
+  <div class="grid">
+
+    <!--area reloj, area img1, area img2, area tareas es como se definen las areas de un grid en css-->
+    <div class="area reloj">
+      <span id="timer">00:00</span>
+    </div>
+
+    <div class="area img1"></div>
+    <div class="area img2"></div>
+
+    <div class="area tareas">
+      <div class="contenido-tareas">
+        <h2>Lista de tareas</h2>
+        
+        <ul id="lista-tareas">
+          <li id="placeholder-tareas" class="placeholder-tarea">Escribe una tarea...</li>
+        </ul>
+
+        <div class="nueva-tarea">
+          <button id="btn-agregar">+</button>
+          <input type="text" placeholder="Escribe la nota" id="nueva-tarea-input" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

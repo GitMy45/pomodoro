@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  background-image: url("https://i.pinimg.com/736x/17/be/8d/17be8d7cbfc378cc4721c59e84aa5c01.jpg");
+  /*background-color: #ffc0e6;*/
+  color: black;
+  text-align: center;
+}
+
+#encabezado {
+  background-color: #f8afd2;
+  padding: 3px;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "reloj reloj tareas tareas"
+    "img1 img2 tareas tareas";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 220px 200px;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.area {
+  /*background-color: #fbb6d6;*/
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Áreas específicas */
+.reloj {
+  grid-area: reloj;
+  font-size: 7rem;
+  color: white;
+  background-image: url("https://i.pinimg.com/736x/b8/8d/67/b88d6779ea09e4f241b932cfd1e7989d.jpg");
+}
+
+.img1 {
+  grid-area: img1;
+  font-size: 1.2rem;
+  background: url('https://i.pinimg.com/736x/b5/f0/4d/b5f04d525cda5d2ee4372324bf070b03.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.img2 {
+  grid-area: img2;
+  font-size: 1.2rem;
+  background: url('https://i.pinimg.com/736x/0a/a6/6b/0aa66b4cf975d9095e9c334fafa7e738.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+
+/*Porbando desde aqui*/
+
+.tareas {
+  grid-area: tareas;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: black;
+  background-color: #ffe2f1;
+  padding: 1rem;
+  /* Removido justify-content: space-between */
+}
+
+.contenido-tareas {
+  width: 100%;
+  height: 100%; /* Añadido para ocupar toda la altura */
+  display: flex; /* Convertido en flex container */
+  flex-direction: column; /* Organiza en columna */
+}
+
+.tareas h2 {
+  color: black;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.tareas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-grow: 1; /* Permite que la lista crezca y ocupe el espacio disponible */
+}
+
+.tareas li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.tareas input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #f87cb8;   /*Cambia el color de la casilla chekbox*/
+}
+
+.nueva-tarea {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto; /* Esto empuja el elemento hasta la parte inferior */
+  width: 100%;
+}
+
+.nueva-tarea input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.nueva-tarea button {
+  background-color: #f87cb8;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/*Para tachar el texto*/
+.completada {
+  text-decoration: line-through; /* Tacha el texto */
+  color: #888; /* Cambia el color a gris para indicar que está completado */
+}
+
+/*Placeholder de la lista -Aunque esta en comentarios ahora en index y js*/
+#placeholder-tareas {
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  display: block;
+}
+
+/* Estilos para el botón de eliminar DE AQUI HASTA EL FONDO*/
+.btn-eliminar {
+  background-color: #ff6b9d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto; /* Empuja el botón hacia la derecha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0; /* Evita que se encoja */
+}
+
+.btn-eliminar:hover {
+  background-color: #ff4081;
+  transform: scale(1.1);
+}
+
+.btn-eliminar:active {
+  transform: scale(0.95);
+}
