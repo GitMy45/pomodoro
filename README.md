@@ -5,6 +5,7 @@ Es solo un pomodoro de tareas rosa, con reloj y lista de tareas :) a mi me gusto
 Para los archivos package, package-lock y nodemodules se crea con:
 
 npm init -y
+
 npm install electron --save-dev
 
 Ahora, para que corra correctamente revisar el package que este:
