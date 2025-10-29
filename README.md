@@ -4,9 +4,12 @@ Es solo un pomodoro de tareas rosa, con reloj y lista de tareas :) a mi me gusto
 ## no olvides
 Para los archivos package, package-lock y nodemodules se crea con:
 
-npm init -y
+- npm init -y
+- npm install electron --save-dev
 
-npm install electron --save-dev
+Para el node modules:
+
+- npm install
 
 Ahora, para que corra correctamente revisar el package que este:
 
@@ -15,4 +18,4 @@ Ahora, para que corra correctamente revisar el package que este:
 
 Y se corre con:
 
-npm start
+- npm start
